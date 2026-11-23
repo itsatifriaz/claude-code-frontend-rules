@@ -1,0 +1,26 @@
+{
+  "name": "frontend-rules-lite",
+  "version": "1.0.0",
+  "description": "Make Claude Code follow frontend team rules: a hook that blocks rule-breaking edits (no any, no fetch in components, no console.log...) plus PR review and component skills for React/Next.js.",
+  "author": {
+    "name": "Atif Riaz",
+    "url": "https://atifriazse.gumroad.com/l/claude-code-team-kit"
+  },
+  "homepage": "https://atifriazse.gumroad.com/l/claude-code-team-kit",
+  "repository": "https://github.com/itsatifriaz/claude-code-frontend-rules",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "nextjs",
+    "typescript",
+    "frontend",
+    "hooks",
+    "code-review",
+    "claude-md",
+    "rules"
+  ],
+  "icon": ".claude-plugin/icon.png",
+  "network": {
+    "hosts": []
+  }
+}
