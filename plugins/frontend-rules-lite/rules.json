@@ -1,0 +1,40 @@
+{
+  "ignore": "(^|/)(node_modules|\\.next|dist|build|coverage|legacy|vendor)/",
+  "rules": [
+    {
+      "id": "no-any",
+      "pattern": "(?:[:<,|&=(]|\\bas|\\bkeyof|\\breadonly)\\s*any(?![\\w$])",
+      "files": "\\.(ts|tsx|mts|cts)$",
+      "exclude": "\\.d\\.ts$",
+      "message": "No `any`. Use a real type, or `unknown` and narrow it."
+    },
+    {
+      "id": "no-ts-ignore",
+      "pattern": "@ts-(ignore|nocheck)",
+      "scan": "all",
+      "files": "\\.(ts|tsx|mts|cts)$",
+      "message": "Don't silence TypeScript. Fix the type error. If it's truly unavoidable, use @ts-expect-error with a reason."
+    },
+    {
+      "id": "no-console-log",
+      "pattern": "\\bconsole\\.log\\(",
+      "files": "\\.(ts|tsx|js|jsx|mjs|vue)$",
+      "exclude": "(\\.(test|spec|stories)\\.|(^|/)(scripts|bin|e2e)/|\\.config\\.)",
+      "message": "Remove console.log. Use the project logger, or delete it."
+    },
+    {
+      "id": "no-fetch-in-components",
+      "pattern": "(?<![\\w$.])fetch\\(",
+      "files": "(^|/)components/.*\\.(tsx|jsx|vue)$",
+      "message": "No raw fetch() in components. Go through the API/data layer named in CLAUDE.md."
+    },
+    {
+      "id": "no-raw-img",
+      "pattern": "<img\\b",
+      "scan": "all",
+      "files": "\\.(tsx|jsx)$",
+      "exclude": "((^|/)(opengraph-image|twitter-image|icon|apple-icon)\\.(tsx|jsx)$|\\.stories\\.|(^|/)emails?/)",
+      "message": "Use next/image instead of <img>."
+    }
+  ]
+}
