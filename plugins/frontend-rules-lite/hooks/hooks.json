@@ -1,0 +1,13 @@
+{
+  "description": "Blocks edits that break your team's frontend rules before they land. Checks only the lines Claude changes.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/enforce-rules.mjs\"" }
+        ]
+      }
+    ]
+  }
+}
