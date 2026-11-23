@@ -1,0 +1,20 @@
+{
+  "name": "atifriaz-frontend",
+  "owner": {
+    "name": "Atif Riaz",
+    "url": "https://atifriazse.gumroad.com/l/claude-code-team-kit"
+  },
+  "metadata": {
+    "description": "Claude Code plugins for React, Next.js and Vue teams by Atif Riaz."
+  },
+  "plugins": [
+    {
+      "name": "frontend-rules-lite",
+      "source": "./plugins/frontend-rules-lite",
+      "description": "Block rule-breaking edits (no any, no fetch in components, no console.log, no <img>) and add PR review + component skills for React/Next.js.",
+      "version": "1.0.0",
+      "category": "development",
+      "keywords": ["react", "nextjs", "typescript", "frontend", "hooks", "code-review"]
+    }
+  ]
+}
